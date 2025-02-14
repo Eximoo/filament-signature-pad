@@ -19,9 +19,6 @@
     :field="$field"
 >
     <div
-        x-load-css="[
-            @js(\Filament\Support\Facades\FilamentAsset::getStyleHref('signature-pad-styles', \Coolsam\SignaturePad\Forms\Components\Fields\SignaturePad::PACKAGE_NAME)),
-        ]"
         ax-load
         ax-load-src="{{ \Filament\Support\Facades\FilamentAsset::getAlpineComponentSrc('signature-pad', \Coolsam\SignaturePad\Forms\Components\Fields\SignaturePad::PACKAGE_NAME) }}"
         x-data="signaturePad(
