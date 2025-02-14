@@ -101,7 +101,7 @@ class SignaturePadServiceProvider extends PackageServiceProvider
     {
         return [
             AlpineComponent::make('signature-pad', __DIR__ . '/../resources/dist/components/signature-pad.js'),
-            Css::make('signature-pad-styles', __DIR__ . '/../resources/dist/signature-pad.css'),
+//            Css::make('signature-pad-styles', __DIR__ . '/../resources/dist/signature-pad.css'),
             //            Js::make('signature-pad-scripts', __DIR__ . '/../resources/dist/signature-pad.js'),
         ];
     }
