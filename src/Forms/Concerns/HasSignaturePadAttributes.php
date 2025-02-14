@@ -19,6 +19,7 @@ trait HasSignaturePadAttributes
     protected string | Closure | null $backgroundColor = 'rgba(255,255,255, 0)';
 
     protected bool $hideDownloadButtons = false;
+    protected bool $hideResizeButton = false;
 
     /**
      * @param  bool  $hide  = true
@@ -105,5 +106,15 @@ trait HasSignaturePadAttributes
     public function isDisabledDownload(): bool
     {
         return $this->hideDownloadButtons;
+    }
+    public function hideResizeButton(bool $hide = true): static
+    {
+        $this->hideResizeButton = $hide;
+
+        return $this;
+    }
+    public function isHiddenResize(): bool
+    {
+        return $this->hideResizeButton;
     }
 }

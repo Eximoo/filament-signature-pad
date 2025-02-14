@@ -57,8 +57,10 @@
                 class="w-full h-full m-2 mx-auto border-dashed rounded-md dark:border-gray-700 before:content-[attr(before)]">
             </canvas>
             <div class="flex mt-2 justify-center space-x-2">
+                @if(!$isHiddenResize())
                 <x-filament::button icon="heroicon-o-arrow-path" color="danger" outlined="true" size="sm" @click.prevent="resizeCanvas()">
                 </x-filament::button>
+                @endif
                 <template x-if="signaturePad">
                     <x-filament::button color="danger" outlined="true" size="sm" @click.prevent="clear()">
                         {{__('signature-pad::signature-pad.clear')}}
